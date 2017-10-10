@@ -1,0 +1,18 @@
+public class TenMinWalk {
+  public static boolean isValid(char[] walk) {
+    int time = 0;
+    int yaxis = 0;
+    int xaxis = 0;
+    while(time<10){
+      for(int x : walk){
+        if(walk[x] == 'n') yaxis++;
+        if(walk[x] == 's') yaxis--;
+        if(walk[x] == 'e') xaxis++;
+        if(walk[x] == 'w') xaxis--;
+        }   
+      time++;
+    }
+    if(xaxis == 0 && yaxis == 0) return true;
+    else return false;
+  }
+}
